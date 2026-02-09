@@ -1,0 +1,143 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_intraday_intensities",
+      "description": "Retrieve intraday minute-level intensities data for a given date and time window.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          },
+          "end": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          }
+        },
+        "required": [
+          "date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_intraday_mets",
+      "description": "Retrieve intraday minute-level METs data for a given date and time window.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          },
+          "end": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          }
+        },
+        "required": [
+          "date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_intraday_calories",
+      "description": "Retrieve intraday minute-level calories data for a given date and time window.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          },
+          "end": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          }
+        },
+        "required": [
+          "date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_intraday_steps",
+      "description": "Retrieve intraday minute-level steps data for a given date and time window.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          },
+          "end": {
+            "type": "string",
+            "description": "The time in the format HH:mm."
+          }
+        },
+        "required": [
+          "date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create_activity_plan",
+      "description": "Creates or updates a user's weekly activity goal.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "goal_type": {
+            "type": "string",
+            "enum": ["steps", "AZM", "mets", "calories_burn"],
+            "description": "Type of the weekly activity goal."
+          },
+          "value": {
+            "type": "integer",
+            "description": "Value of the weekly activity goal."
+          }
+        },
+        "required": ["goal_type", "value"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_activity_plan",
+      "description": "Retrieves the user's weekly activity goal. This tool applies to weekly goals.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+]

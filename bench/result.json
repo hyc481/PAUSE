@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "gpt-4.1": {
+      "count": 33,
+      "logic_avg": 0.0,
+      "param_avg": 0.0,
+      "reason_policy_avg": 0.0,
+      "tool_call_correct_avg": 0.0,
+      "task_completion_avg": 0.09090909090909091,
+      "targets_achieved_avg": 0.5954545454545455,
+      "jaccard_avg": 0.21541857457904892,
+      "precision_avg": 0.5193769016735523,
+      "recall_avg": 0.2668934515897676,
+      "f1_avg": 0.3348369746430042,
+      "failure_categories": {},
+      "failed_with_error_analysis_count": 30
+    },
+    "gpt-5": {
+      "count": 33,
+      "logic_avg": 0.0,
+      "param_avg": 0.0,
+      "reason_policy_avg": 0.0,
+      "tool_call_correct_avg": 0.0,
+      "task_completion_avg": 0.7878787878787878,
+      "targets_achieved_avg": 0.9075757575757576,
+      "jaccard_avg": 0.4073075461456196,
+      "precision_avg": 0.5655679105125645,
+      "recall_avg": 0.6080790131848443,
+      "f1_avg": 0.558047166852043,
+      "failure_categories": {},
+      "failed_with_error_analysis_count": 7
+    },
+    "deepseek-reasoner": {
+      "count": 33,
+      "logic_avg": 0.0,
+      "param_avg": 0.0,
+      "reason_policy_avg": 0.0,
+      "tool_call_correct_avg": 0.0,
+      "task_completion_avg": 0.45454545454545453,
+      "targets_achieved_avg": 0.7595959595959596,
+      "jaccard_avg": 0.25403167103983226,
+      "precision_avg": 0.38166490028294975,
+      "recall_avg": 0.42139491547077723,
+      "f1_avg": 0.37822145119819617,
+      "failure_categories": {},
+      "failed_with_error_analysis_count": 15
+    }
+  },
+  "total_rows": 99,
+  "evaluated_tasks_dir": "/home/chy/state_aware_bench/bench/bench_tasks/abalation_run4/evaluated_tasks_pro",
+  "failure_classification_enabled": false
+}

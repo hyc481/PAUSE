@@ -1,0 +1,137 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "update_source",
+      "description": "Introduce a new source or update the permission status for an existing data source.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source_name": {
+            "type": "string",
+            "description": "Name of the data source to add or update.",
+            "enum": [
+              "fitbit",
+              "google_fit",
+              "apple_health",
+              "huawei_health",
+              "samsung_tracking",
+              "garmin_connect",
+              "oura",
+              "xiaomi_mi_fitness",
+              "polar_flow",
+              "withings"
+            ]
+          },
+          "allow": {
+            "type": "boolean",
+            "description": "Whether the data source is allowed (true) or disallowed (false)."
+          }
+        },
+        "required": ["source_name", "allow"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "set_raw_data_permission",
+      "description": "Grant or revoke permission to access raw data.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "allow": {
+            "type": "boolean",
+            "description": "Whether raw data access is allowed."
+          }
+        },
+        "required": ["allow"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "set_user_notes_permission",
+      "description": "Grant or revoke permission to access user notes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "allow": {
+            "type": "boolean",
+            "description": "Whether access to user notes is allowed."
+          }
+        },
+        "required": ["allow"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "set_purchase_permission",
+      "description": "Grant or revoke permission to access purchase-related data.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "allow": {
+            "type": "boolean",
+            "description": "Whether purchase data access is allowed."
+          }
+        },
+        "required": ["allow"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "set_med_assistant_permission",
+      "description": "Grant or revoke permission for medical-assistant features.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "allow": {
+            "type": "boolean",
+            "description": "Whether medical-assistant functionality is enabled."
+          }
+        },
+        "required": ["allow"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "top_up_wallet",
+      "description": "Add money to the user's wallet balance.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "Amount to add to the wallet. Must be positive."
+          }
+        },
+        "required": ["amount"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "authorize_checkout",
+      "description": "Finalize a pending transaction (order or vip_membership). Deduct balance and update wallet state. This represents an action performed by the user.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "description": "ID of a pending transaction created by prepare_order or upgrade_membership_request."
+          }
+        },
+        "required": ["transaction_id"]
+      }
+    }
+  }
+]

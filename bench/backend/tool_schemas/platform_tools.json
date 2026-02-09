@@ -1,0 +1,831 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_daily_sleep_summary",
+      "description": "return the info and summary of sleep segments in the designted date input (8:00 am to 8:00 am next day)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "date in YYYY-MM-DD format."
+          }
+        },
+        "required": [
+          "date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_user_profile",
+      "description": "Retrieve the user's demographic info, health risks, dietary restrictions, daily goals, and long-term sport/food preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "browse_items",
+      "description": "Browse items with pagination. Returns lightweight product entries including product_id, name, tags, and discount factor (certain discounts are only available to VIP users). Results are paginated. Browsing additional pages may reveal more items.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "description": "Page index starting from 1."
+          }
+        },
+        "required": [
+          "page"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "inspect_item",
+      "description": "Retrieve full details of an item, including detailed discount information, stock count, packaging specifications, nutrition, and all purchase options.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "Unique product id."
+          }
+        },
+        "required": [
+          "product_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "add_to_cart",
+      "description": "Add a new item entry to the cart.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "The unique ID of the product to add."
+          },
+          "size": {
+            "type": "string",
+            "description": "The size or package variant of the product."
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Desired quantity (>=1)."
+          }
+        },
+        "required": [
+          "product_id",
+          "quantity",
+          "size"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "remove_from_cart",
+      "description": "Remove a specific cart entry by its cart_item_id.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "cart_item_id": {
+            "type": "string",
+            "description": "The unique cart item identifier returned from add_to_cart."
+          }
+        },
+        "required": [
+          "cart_item_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_cart",
+      "description": "Retrieve the current shopping cart contents and pricing summary.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "prepare_order",
+      "description": "Prepare an order from the current cart, optionally applying an available voucher. This action creates a pending transaction for user confirmation and clears all items from the cart.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "voucher_id": {
+            "type": "string",
+            "description": "Voucher id to apply (or null if none)."
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_wallet",
+      "description": "Get user's wallet info: balance, VIP status, available vouchers.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "upgrade_membership_request",
+      "description": "Request upgrade of membership (VIP). Does not finalize payment — returns a pending transaction.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "vip_duration": {
+            "type": "string",
+            "enum": [
+              "1_month",
+              "3_months",
+              "1_year"
+            ],
+            "description": "Desired VIP subscription duration."
+          }
+        },
+        "required": [
+          "vip_duration"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_transactions",
+      "description": "Get history of user's past transactions (orders and membership).",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_sport_records",
+      "description": "Retrieve sport records within a date range.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "description": "Start date in YYYY-MM-DD."
+          },
+          "end_date": {
+            "type": "string",
+            "description": "End date in YYYY-MM-DD."
+          }
+        },
+        "required": [
+          "start_date",
+          "end_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_session_records",
+      "description": "Retrieve lifestyle session records (e.g., study, meditation, work) created by user within a date range. Returns a list of session records.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "description": "Start date in YYYY-MM-DD."
+          },
+          "end_date": {
+            "type": "string",
+            "description": "End date in YYYY-MM-DD."
+          }
+        },
+        "required": [
+          "start_date",
+          "end_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_meal_records",
+      "description": "Retrieve meal records created by user within a date range. Returns a list of detailed meal records, including food items.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "description": "Start date in YYYY-MM-DD."
+          },
+          "end_date": {
+            "type": "string",
+            "description": "End date in YYYY-MM-DD."
+          }
+        },
+        "required": [
+          "start_date",
+          "end_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function":{
+      "name": "analysis_meal",
+      "description": "Analyze a specific meal record and return its numeric nutrition values (calories, fiber, fat, sugar). This tool exposes full nutrition details for a single meal identified by record_id.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "record_id": {
+            "type": "string",
+            "description": "Unique identifier of the meal record to analyze."
+          }
+        },
+        "required": ["record_id"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create_session_record",
+      "description": "Create a lifestyle session record such as study, meditation, work, or other duration-based activities.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_time": {
+            "type": "string",
+            "description": "Start timestamp in ISO 8601 format."
+          },
+          "end_time": {
+            "type": "string",
+            "description": "End timestamp in ISO 8601 format."
+          },
+          "session_type": {
+            "type": "string",
+            "description": "Category of the session (e.g., study, meditation, work)."
+          },
+          "user_note": {
+            "type": "string",
+            "description": "Optional user-provided note about the session."
+          }
+        },
+        "required": [
+          "start_time",
+          "end_time",
+          "session_type"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create_meal_record",
+      "description": "Create a meal record that contains one or more food items. Each item may include name, quantity, and optional calorie information.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "description": "Timestamp of the meal in ISO 8601 format."
+          },
+          "items": {
+            "type": "array",
+            "description": "List of food items included in the meal.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the food item."
+                },
+                "amount": {
+                  "type": "object",
+                  "description": "Amount of the food item, including numeric value and unit.",
+                  "properties": {
+                    "value": {
+                      "type": "number",
+                      "description": "Numeric amount of the food item."
+                    },
+                    "unit": {
+                      "type": "string",
+                      "description": "Unit of measurement (e.g., g, ml, l)."
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "unit"
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "amount"
+              ]
+            }
+          }
+        },
+        "required": [
+          "timestamp",
+          "items"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "delete_record",
+      "description": "Delete a user record by its unique record_id.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "record_id": {
+            "type": "string",
+            "description": "The unique identifier of the record to delete."
+          }
+        },
+        "required": [
+          "record_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "recommend_sports",
+      "description": "Recommend sports activities based on recent sports records, user preferences, and desired intensity. VIP required to call the tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "recent_sports_records": {
+            "type": "array",
+            "description": "Past sport records including sport type, duration, calories, and AZM.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sport_type": {
+                  "type": "string"
+                },
+                "duration_minutes": {
+                  "type": "number"
+                },
+                "calories": {
+                  "type": "number"
+                },
+                "azm": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "sport_type",
+                "duration_minutes",
+                "calories",
+                "azm"
+              ]
+            }
+          },
+          "preference": {
+            "type": "string",
+            "description": "User training preference",
+            "enum": [
+              "cardio",
+              "endurance",
+              "speed_training",
+              "strength",
+              "recovery",
+              "mixed_cardio"
+            ]
+          },
+          "intensity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "description": "Desired workout intensity."
+          }
+        },
+        "required": [
+          "recent_sports_records",
+          "preference",
+          "intensity"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_range_summary",
+      "description": "Retrieve aggregated metrics (max, min, mean) over a specified date range, summarizing steps, calories, METs, activity intensity distribution, Active Zone Minutes (fairly_active_minutes+very_active_minutes), daily goal completion history, and a weighted system evaluation score.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "description": "Start date in YYYY-MM-DD format (inclusive)."
+          },
+          "end_date": {
+            "type": "string",
+            "description": "End date in YYYY-MM-DD format (inclusive)."
+          }
+        },
+        "required": [
+          "start_date",
+          "end_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_daily_summary",
+      "description": "Retrieve the data source, device info and daily aggregated summary for a given date, including steps, calories, METs, activity intensity distribution, Active Zone Minutes (fairly_active_minutes+very_active_minutes), heart rate zone summaries, user goals completion status, and a system-level evaluation score.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          }
+        },
+        "required": [
+          "date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_hourly_calories",
+      "description": "Retrieve hourly aggregated calorie expenditure for a specified date and time window. Hourly data is aggregated over a half-open time range [start, end), where each hour represents the interval [hour:00, hour+1:00).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "integer",
+            "description": "Inclusive start hour (0–23). Represents the beginning of the aggregation window."
+          },
+          "end": {
+            "type": "integer",
+            "description": "Exclusive end hour (1–24). Aggregation includes all hourly slots starting at start and ending before end. For example, start=0 and end=2 returns data for 00:00–02:00."
+          }
+        },
+        "required": [
+          "date",
+          "start",
+          "end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_hourly_steps",
+      "description": "Retrieve hourly aggregated steps expenditure for a specified date and time window. Hourly data is aggregated over a half-open time range [start, end), where each hour represents the interval [hour:00, hour+1:00).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "integer",
+            "description": "Inclusive start hour (0–23). Represents the beginning of the aggregation window."
+          },
+          "end": {
+            "type": "integer",
+            "description": "Exclusive end hour (1–24). Aggregation includes all hourly slots starting at start and ending before end. For example, start=0 and end=2 returns data for 00:00–02:00."
+          }
+        },
+        "required": [
+          "date",
+          "start",
+          "end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_hourly_mets",
+      "description": "Retrieve hourly aggregated mets expenditure for a specified date and time window. Hourly data is aggregated over a half-open time range [start, end), where each hour represents the interval [hour:00, hour+1:00).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "integer",
+            "description": "Inclusive start hour (0–23). Represents the beginning of the aggregation window."
+          },
+          "end": {
+            "type": "integer",
+            "description": "Exclusive end hour (1–24). Aggregation includes all hourly slots starting at start and ending before end. For example, start=0 and end=2 returns data for 00:00–02:00."
+          }
+        },
+        "required": [
+          "date",
+          "start",
+          "end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_hourly_activity",
+      "description": "Retrieve hourly aggregated activity distribution for a specified date and time window. Hourly data is aggregated over a half-open time range [start, end), where each hour represents the interval [hour:00, hour+1:00).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Target date in YYYY-MM-DD format."
+          },
+          "start": {
+            "type": "integer",
+            "description": "Inclusive start hour (0–23). Represents the beginning of the aggregation window."
+          },
+          "end": {
+            "type": "integer",
+            "description": "Exclusive end hour (1–24). Aggregation includes all hourly slots starting at start and ending before end. For example, start=0 and end=2 returns data for 00:00–02:00."
+          }
+        },
+        "required": [
+          "date",
+          "start",
+          "end"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "list_notes",
+      "description": "List user-created notes within the given date range.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "description": "Start date in YYYY-MM-DD format."
+          },
+          "end_date": {
+            "type": "string",
+            "description": "End date in YYYY-MM-DD format."
+          }
+        },
+        "required": [
+          "start_date",
+          "end_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "add_note",
+      "description": "Create a user note stamped with current profile time. Requires allow_user_notes_access permission.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "note": {
+            "type": "string",
+            "description": "Note content."
+          }
+        },
+        "required": [
+          "note"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "delete_note",
+      "description": "Delete a user note by its note_id. Requires allow_user_notes_access permission.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "note_id": {
+            "type": "string",
+            "description": "The unique identifier of the note to delete."
+          }
+        },
+        "required": [
+          "note_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "list_daily_reminders",
+      "description": "Return all daily reminders created by the user.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create_daily_reminder",
+      "description": "Create a daily or weekly repeating reminder.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Reminder content."
+          },
+          "time_of_day": {
+            "type": "string",
+            "description": "HH:MM in 24-hour format."
+          },
+          "repeat_days": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+              ]
+            },
+            "description": "Days of week to repeat. If null/empty: repeat daily."
+          }
+        },
+        "required": [
+          "title",
+          "time_of_day",
+          "repeat_days"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "delete_daily_reminder",
+      "description": "Delete a daily reminder by its ID.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reminder_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reminder_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_system_settings",
+      "description": "Retrieve system-level source and device log, permissions, available features, and privacy settings.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "plot_time_series",
+      "description": "Plot a time-series with explicit granularity and units. Useful for visualizing intraday, hourly, or daily metrics.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_time": {
+            "type": "string",
+            "description": "ISO8601 timestamp marking the start of the time series. Example: '2024-06-10T00:00:00'."
+          },
+          "granularity": {
+            "type": "string",
+            "enum": [
+              "minute",
+              "hour",
+              "day"
+            ],
+            "description": "The interval between each data point in the time_series array."
+          },
+          "time_series": {
+            "type": "array",
+            "description": "Sequential time-series values matching the chosen granularity.",
+            "items": {
+              "type": "number"
+            }
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of the time-series values, e.g., 'kcal', 'steps', 'bpm'."
+          }
+        },
+        "required": [
+          "start_time",
+          "granularity",
+          "time_series"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_med_features",
+      "description": "Retrieve the list of tools to retrieve information from health providers. Available to VIP users only.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_source_features",
+      "description": "Retrieve the list of available agent tools for a given data source (e.g., Fitbit, Google Fit).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source_name": {
+            "type": "string",
+            "description": "The name of the data source whose tool list is requested, such as 'fitbit' or 'google_fit'."
+          }
+        },
+        "required": [
+          "source_name"
+        ]
+      }
+    }
+  }
+]

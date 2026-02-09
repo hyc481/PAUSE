@@ -1,0 +1,957 @@
+[
+  {
+    "product_id": "p_0423db_001",
+    "name": "EverydayBite Whole Wheat Biscuit",
+    "price": 5.83,
+    "discount": 1.0,
+    "tags": [
+      "high_fiber",
+      "low_sugar"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_60ee71_002",
+    "name": "Cookie",
+    "price": 3.8,
+    "discount": 1.0,
+    "tags": [
+      "high_sugar",
+      "high_fat",
+      "high_calorie",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_8a6419_003",
+    "name": "Sugar Free Cracker",
+    "price": 5.84,
+    "discount": 1.0,
+    "tags": [
+      "sugar_free",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_ab1300_004",
+    "name": "EverydayBite Oat Cookie",
+    "price": 3.29,
+    "discount": 1.0,
+    "tags": [
+      "high_fiber",
+      "high_sugar"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_bfc8a6_005",
+    "name": "EverydayBite Nut Cookie",
+    "price": 3.61,
+    "discount": 0.7,
+    "tags": [
+      "nut",
+      "high_sugar",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_d50ac1_006",
+    "name": "Low Sugar Yogurt",
+    "price": 5.43,
+    "discount": 1.0,
+    "tags": [
+      "low_sugar",
+      "high_protein",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_2f1649_007",
+    "name": "EverydayBite Greek Yogurt",
+    "price": 7.15,
+    "discount": 0.5,
+    "tags": [
+      "high_protein",
+      "high_fat"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_d054d9_008",
+    "name": "High Protein Milk",
+    "price": 7.32,
+    "discount": 0.8,
+    "tags": [
+      "high_protein",
+      "low_fat",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_77170d_009",
+    "name": "Organic Milk",
+    "price": 8.18,
+    "discount": 0.6,
+    "tags": [
+      "organic",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_af1c6c_010",
+    "name": "EverydayBite Almonds",
+    "price": 8.23,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "high_fiber",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_ebbf49_011",
+    "name": "Cashews",
+    "price": 7.83,
+    "discount": 1.0,
+    "tags": [
+      "high_fat",
+      "high_calorie",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_be0e41_012",
+    "name": "EverydayBite Trail Mix",
+    "price": 9.04,
+    "discount": 0.8,
+    "tags": [
+      "high_sugar",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_e1ff5a_013",
+    "name": "Whey Protein Bar",
+    "price": 6.32,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "low_sugar",
+      "high_calorie",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_372d8a_014",
+    "name": "EverydayBite Nut Energy Bar",
+    "price": 4.16,
+    "discount": 0.5,
+    "tags": [
+      "nut",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_dee7ea_015",
+    "name": "EverydayBite Protein Shake Powder",
+    "price": 14.02,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "low_sugar",
+      "low_fat",
+      "low_calorie",
+      "diabetic_safe"
+    ],
+    "base_tags": [
+      "meal_replacement"
+    ]
+  },
+  {
+    "product_id": "p_123695_016",
+    "name": "EverydayBite Low Sugar Porridge",
+    "price": 9.56,
+    "discount": 0.6,
+    "tags": [
+      "gluten",
+      "low_sugar",
+      "high_fiber",
+      "diabetic_safe"
+    ],
+    "base_tags": [
+      "meal_replacement"
+    ]
+  },
+  {
+    "product_id": "p_1dd1d2_017",
+    "name": "Zero Sugar Soda",
+    "price": 6.03,
+    "discount": 1.0,
+    "tags": [
+      "sugar_free",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "drink"
+    ]
+  },
+  {
+    "product_id": "p_43aaaf_018",
+    "name": "EverydayBite Isotonic Sport Drink",
+    "price": 3.56,
+    "discount": 1.0,
+    "tags": [
+      "high_sugar",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "drink"
+    ]
+  },
+  {
+    "product_id": "p_80f7d6_019",
+    "name": "Potato Chips Classic",
+    "price": 4.12,
+    "discount": 1.0,
+    "tags": [
+      "high_fat",
+      "high_calorie",
+      "high_sodium",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "chip"
+    ]
+  },
+  {
+    "product_id": "p_af917a_020",
+    "name": "Baked Vegetable Chips",
+    "price": 5.03,
+    "discount": 0.6,
+    "tags": [
+      "low_fat",
+      "low_sodium",
+      "low_calorie",
+      "EverydayBite"
+    ],
+    "base_tags": [
+      "chip"
+    ]
+  },
+  {
+    "product_id": "p_d37561_021",
+    "name": "Cookie",
+    "price": 5.63,
+    "discount": 1.0,
+    "tags": [
+      "high_sugar",
+      "high_fat",
+      "high_calorie",
+      "FamilyPack"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_714a17_022",
+    "name": "Oat Cookie",
+    "price": 4.39,
+    "discount": 0.5,
+    "tags": [
+      "high_fiber",
+      "high_sugar",
+      "FamilyPack"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_9783a2_023",
+    "name": "FamilyPack Nut Cookie",
+    "price": 3.65,
+    "discount": 0.7,
+    "tags": [
+      "nut",
+      "high_sugar",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_f9f094_024",
+    "name": "FamilyPack Low Sugar Yogurt",
+    "price": 8.37,
+    "discount": 1.0,
+    "tags": [
+      "low_sugar",
+      "high_protein"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_397629_025",
+    "name": "High Protein Milk",
+    "price": 7.17,
+    "discount": 0.7,
+    "tags": [
+      "high_protein",
+      "low_fat",
+      "FamilyPack"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_619c62_026",
+    "name": "Unsweetened Soy Milk",
+    "price": 8.66,
+    "discount": 1.0,
+    "tags": [
+      "lactose_free",
+      "vegan",
+      "low_sugar",
+      "high_protein",
+      "FamilyPack"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_fa594e_027",
+    "name": "FamilyPack Cashews",
+    "price": 5.9,
+    "discount": 1.0,
+    "tags": [
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_be1651_028",
+    "name": "FamilyPack Trail Mix",
+    "price": 7.29,
+    "discount": 0.5,
+    "tags": [
+      "high_sugar",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_d861de_029",
+    "name": "FamilyPack Low Sodium Nuts",
+    "price": 8.87,
+    "discount": 0.6,
+    "tags": [
+      "low_sodium",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_e14dde_030",
+    "name": "FamilyPack Roasted Peanuts",
+    "price": 10.15,
+    "discount": 0.7,
+    "tags": [
+      "high_fat",
+      "high_protein",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_6f0cad_031",
+    "name": "FamilyPack Whey Protein Bar",
+    "price": 5.24,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "low_sugar",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_42c89a_032",
+    "name": "FamilyPack Nut Energy Bar",
+    "price": 3.18,
+    "discount": 1.0,
+    "tags": [
+      "nut",
+      "high_fat",
+      "high_calorie"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_2ad645_033",
+    "name": "FamilyPack Cereal Meal Porridge",
+    "price": 11.42,
+    "discount": 1.0,
+    "tags": [
+      "gluten",
+      "high_fiber"
+    ],
+    "base_tags": [
+      "meal_replacement"
+    ]
+  },
+  {
+    "product_id": "p_d6218f_034",
+    "name": "Low Fat Meal Soup",
+    "price": 9.17,
+    "discount": 1.0,
+    "tags": [
+      "low_fat",
+      "low_calorie",
+      "FamilyPack"
+    ],
+    "base_tags": [
+      "meal_replacement"
+    ]
+  },
+  {
+    "product_id": "p_76a655_035",
+    "name": "Isotonic Sport Drink",
+    "price": 2.68,
+    "discount": 1.0,
+    "tags": [
+      "high_sugar",
+      "high_calorie",
+      "FamilyPack"
+    ],
+    "base_tags": [
+      "drink"
+    ]
+  },
+  {
+    "product_id": "p_25e9e1_036",
+    "name": "FamilyPack Potato Chips Classic",
+    "price": 3.71,
+    "discount": 0.6,
+    "tags": [
+      "high_fat",
+      "high_calorie",
+      "high_sodium"
+    ],
+    "base_tags": [
+      "chip"
+    ]
+  },
+  {
+    "product_id": "p_56f94f_037",
+    "name": "Protein Chips",
+    "price": 3.51,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "low_sugar",
+      "high_sodium",
+      "FamilyPack"
+    ],
+    "base_tags": [
+      "chip"
+    ]
+  },
+  {
+    "product_id": "p_e59d8c_038",
+    "name": "PureBalance Whole Wheat Biscuit",
+    "price": 6.53,
+    "discount": 1.0,
+    "tags": [
+      "high_fiber",
+      "low_sugar"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_950953_039",
+    "name": "Sugar Free Cracker",
+    "price": 4.66,
+    "discount": 0.5,
+    "tags": [
+      "sugar_free",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_66c86d_040",
+    "name": "Gluten Free Biscuit",
+    "price": 8.5,
+    "discount": 0.6,
+    "tags": [
+      "gluten_free",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_6cac28_041",
+    "name": "PureBalance Low Sugar Yogurt",
+    "price": 8.27,
+    "discount": 0.7,
+    "tags": [
+      "low_sugar",
+      "high_protein"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_97fbdd_042",
+    "name": "PureBalance Lactose Free Milk",
+    "price": 6.26,
+    "discount": 1.0,
+    "tags": [
+      "lactose_free"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_ebecd5_043",
+    "name": "PureBalance Organic Milk",
+    "price": 10.23,
+    "discount": 1.0,
+    "tags": [
+      "organic"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_535866_044",
+    "name": "Unsweetened Soy Milk",
+    "price": 9.91,
+    "discount": 1.0,
+    "tags": [
+      "lactose_free",
+      "vegan",
+      "low_sugar",
+      "high_protein",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_04e6eb_045",
+    "name": "Almonds",
+    "price": 7.09,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "high_fiber",
+      "high_fat",
+      "high_calorie",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_00a6ce_046",
+    "name": "Mixed Nuts Unsweetened",
+    "price": 9.39,
+    "discount": 0.8,
+    "tags": [
+      "low_sugar",
+      "high_fiber",
+      "high_fat",
+      "high_calorie",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_decec8_047",
+    "name": "Gluten Free Oat Bar",
+    "price": 6.03,
+    "discount": 1.0,
+    "tags": [
+      "gluten_free",
+      "high_fiber",
+      "low_sugar",
+      "diabetic_safe",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_9c441d_048",
+    "name": "PureBalance High Fiber Meal Bar",
+    "price": 6.81,
+    "discount": 1.0,
+    "tags": [
+      "high_fiber",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_6d7f56_049",
+    "name": "PureBalance Protein Shake Powder",
+    "price": 14.38,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "low_sugar",
+      "low_fat",
+      "low_calorie",
+      "diabetic_safe"
+    ],
+    "base_tags": [
+      "meal_replacement"
+    ]
+  },
+  {
+    "product_id": "p_4f5aef_050",
+    "name": "Low Sugar Porridge",
+    "price": 10.86,
+    "discount": 0.7,
+    "tags": [
+      "gluten",
+      "low_sugar",
+      "high_fiber",
+      "diabetic_safe",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "meal_replacement"
+    ]
+  },
+  {
+    "product_id": "p_fe9119_051",
+    "name": "Zero Sugar Soda",
+    "price": 3.87,
+    "discount": 1.0,
+    "tags": [
+      "sugar_free",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "drink"
+    ]
+  },
+  {
+    "product_id": "p_4b377b_052",
+    "name": "No Sugar Added Dried Mix",
+    "price": 5.48,
+    "discount": 1.0,
+    "tags": [
+      "low_sugar",
+      "high_fiber",
+      "high_calorie",
+      "PureBalance"
+    ],
+    "base_tags": [
+      "fruit"
+    ]
+  },
+  {
+    "product_id": "p_361e4e_053",
+    "name": "Gluten Free Biscuit",
+    "price": 8.63,
+    "discount": 0.5,
+    "tags": [
+      "gluten_free",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_993c30_054",
+    "name": "Whole Wheat Biscuit",
+    "price": 5.19,
+    "discount": 0.8,
+    "tags": [
+      "high_fiber",
+      "low_sugar",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "biscuit",
+      "gluten"
+    ]
+  },
+  {
+    "product_id": "p_5a56c5_055",
+    "name": "Greek Yogurt",
+    "price": 9.53,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "high_fat",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_1d3d00_056",
+    "name": "Organic Milk",
+    "price": 11.27,
+    "discount": 0.6,
+    "tags": [
+      "organic",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "dairy",
+      "lactose"
+    ]
+  },
+  {
+    "product_id": "p_7696a5_057",
+    "name": "EliteVital Almonds",
+    "price": 13.67,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "high_fiber",
+      "high_fat",
+      "high_calorie",
+      "premium"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_58beec_058",
+    "name": "Mixed Nuts Unsweetened",
+    "price": 14.91,
+    "discount": 1.0,
+    "tags": [
+      "low_sugar",
+      "high_fiber",
+      "high_fat",
+      "high_calorie",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "nut"
+    ]
+  },
+  {
+    "product_id": "p_43a9e9_059",
+    "name": "High Fiber Meal Bar",
+    "price": 8.55,
+    "discount": 1.0,
+    "tags": [
+      "high_fiber",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_2e81bd_060",
+    "name": "Whey Protein Bar",
+    "price": 9.39,
+    "discount": 1.0,
+    "tags": [
+      "high_protein",
+      "low_sugar",
+      "high_calorie",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "bar"
+    ]
+  },
+  {
+    "product_id": "p_bf2f4d_061",
+    "name": "Protein Shake Powder",
+    "price": 25.32,
+    "discount": 0.8,
+    "tags": [
+      "high_protein",
+      "low_sugar",
+      "low_fat",
+      "low_calorie",
+      "diabetic_safe",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "meal_replacement"
+    ]
+  },
+  {
+    "product_id": "p_fb41ba_062",
+    "name": "Zero Sugar Soda",
+    "price": 7.86,
+    "discount": 0.6,
+    "tags": [
+      "sugar_free",
+      "low_sugar",
+      "low_calorie",
+      "diabetic_safe",
+      "EliteVital",
+      "premium"
+    ],
+    "base_tags": [
+      "drink"
+    ]
+  },
+  {
+    "product_id": "p_e7776f_063",
+    "name": "EliteVital Baked Vegetable Chips",
+    "price": 6.66,
+    "discount": 1.0,
+    "tags": [
+      "low_fat",
+      "low_sodium",
+      "low_calorie",
+      "premium"
+    ],
+    "base_tags": [
+      "chip"
+    ]
+  }
+]

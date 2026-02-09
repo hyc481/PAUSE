@@ -1,0 +1,91 @@
+[
+  {
+    "fitbit": [
+      "get_intraday_intensities",
+      "get_intraday_mets",
+      "get_intraday_calories",
+      "get_intraday_steps",
+      "create_activity_goal",
+      "get_activity_goal"
+    ]
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create_activity_goal",
+      "description": "Creates or updates a user's daily or weekly activity goal. Steps unit: count; AZM unit: minutes; calories_burn unit: kilocalories.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "type": "string",
+            "enum": ["daily", "weekly"],
+            "description": "Goal period – daily or weekly."
+          },
+          "goal_type": {
+            "type": "string",
+            "enum": ["steps", "AZM", "mets", "calories_burn"],
+            "description": "Goal type."
+          },
+          "value": {
+            "type": "integer",
+            "description": "Goal value."
+          }
+        },
+        "required": ["period", "goal_type", "value"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_activity_goal",
+      "description": "Retrieves a user's daily or weekly activity goal. Steps unit: count; AZM unit: minutes; calories_burn unit: kilocalories.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "type": "string",
+            "enum": ["daily", "weekly"],
+            "description": "Goal period – daily or weekly."
+          }
+        },
+        "required": ["period"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": " update_activity_target",
+      "description": "Creates or updates a user's daily activity goal.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "goal_type": {
+            "type": "string",
+            "enum": ["steps", "AZM", "mets","calories_burn"],
+            "description": "Type of the daily activity goal."
+          },
+          "value": {
+            "type": "integer",
+            "description": "Value of the daily activity goal."
+          }
+        },
+        "required": ["goal_type", "value"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_activity_target",
+      "description": "Retrieves the user's daily activity goal.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    }
+  }
+]

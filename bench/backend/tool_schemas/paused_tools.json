@@ -1,0 +1,84 @@
+{
+    "type": "function",
+    "function": {
+      "name": "update_profile",
+      "description": "Update the user's profile. Only the fields provided in the request will be modified; all other fields remain unchanged.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "basic_info": {
+            "type": "object",
+            "description": "Basic information; any field not provided will not be modified.",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "age": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "gender": {
+                "type": "string"
+              }
+            }
+          },
+          "health_risks": {
+            "type": "array",
+            "description": "Chronic disease or risk labels. If provided, this array fully replaces the existing health_risks.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dietary_restrictions": {
+            "type": "array",
+            "description": "Dietary restrictions. If provided, this array fully replaces the existing dietary_restrictions.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "preferences": {
+            "type": "object",
+            "description": "User preferences; unspecified subfields remain unchanged.",
+            "properties": {
+              "sport": {
+                "type": "array",
+                "description": "Sport preferences, replacing the existing list if provided.",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "food": {
+                "type": "array",
+                "description": "Food preferences, replacing the existing list if provided.",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "daily_goal": {
+            "type": "object",
+            "description": "Daily goals; unspecified fields remain unchanged.",
+            "properties": {
+              "steps": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "calories_intake": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "calories_burn": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "AZM": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
