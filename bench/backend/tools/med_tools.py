@@ -4,7 +4,7 @@ from __future__ import annotations
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 
-from bench.backend.utils.generate_ids import (
+from bench.utils.generate_ids import (
     generate_appointment_id,
     generate_transaction_id,
 )

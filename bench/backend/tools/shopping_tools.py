@@ -17,7 +17,7 @@ import os
 from typing import Dict, Any, List, Optional
 from datetime import date
 
-from bench.backend.utils.generate_ids import (
+from bench.utils.generate_ids import (
     generate_cart_item_id,
     generate_transaction_id,
 )

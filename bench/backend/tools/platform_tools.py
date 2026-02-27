@@ -8,14 +8,15 @@ import json
 from pathlib import Path
 import random
 
-from bench.backend.utils.generate_ids import (
+from bench.utils.paths import TOOL_SCHEMAS_DIR, DATA_DIR
+from bench.utils.generate_ids import (
     generate_meal_id,
     generate_plot_id,
     generate_reminder_id,
     generate_session_id,
     generate_note_id,
 )
-from bench.backend.build_user.inject_meals import ATOM_MEALS
+from bench.pipeline.build_user.inject_meals import ATOM_MEALS
 
 # ============================================================
 # State checking: verify data availability for a given date
@@ -916,8 +917,7 @@ def get_source_features(
         }
     
     # Get the path to source_tools.json
-    root = Path(__file__).resolve().parents[1]  # state_aware_bench/bench/backend
-    source_tools_path = root / "tool_schemas" / "source_tools.json"
+    source_tools_path = TOOL_SCHEMAS_DIR / "source_tools.json"
     
     # Load all source tool schemas
     use_gemini = _tool_schema_format == "gemini"
@@ -981,8 +981,7 @@ def get_med_features(
         }
     
     # Get the path to med_tools.json
-    root = Path(__file__).resolve().parents[1]  # state_aware_bench/bench/backend
-    med_tools_path = root / "tool_schemas" /  "med_tools.json"
+    med_tools_path = TOOL_SCHEMAS_DIR / "med_tools.json"
     
     # Load all medical tool schemas
     use_gemini = _tool_schema_format == "gemini"
@@ -1556,8 +1555,7 @@ def recommend_health_food(
     # -----------------------------
     # Load product catalog (once)
     # -----------------------------
-    root = Path(__file__).resolve().parents[1]  # state_aware_bench/bench/backend
-    product_path = root / "data" / "product_details.json"
+    product_path = DATA_DIR / "product_details.json"
     try:
         with open(product_path, "r", encoding="utf-8") as f:
             product_details = json.load(f)
