@@ -1,0 +1,5 @@
+# Python 3.10+ required (google-genai)
+
+openai>=1.50.0,<3
+google-genai>=1.47.0
+pandas>=2.0.0

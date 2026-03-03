@@ -18,23 +18,39 @@ from typing import Tuple, Optional, Union, Dict
 from bench.utils.paths import RUNS_DIR, SNAPSHOTS_DIR
 from bench.pipeline.build_store import build_store
 from bench.pipeline.generate_task.orchestrator import TaskOrchestrator
-# from bench.backend.generate_task.branches.wearable_data_casual import WearableDataCasual
-# from bench.backend.generate_task.branches.wearable_data_advanced import WearableDataAdvanced
-# from bench.backend.generate_task.branches.lifestyle_record_casual import LifeStyleCasual
-# from bench.backend.generate_task.branches.lifestyle_record_advanced import LifeStyleAdvanced
+from bench.pipeline.generate_task.branches.wearable_data_casual import WearableDataCasual
+from bench.pipeline.generate_task.branches.wearable_data_advanced import WearableDataAdvanced
+from bench.pipeline.generate_task.branches.lifestyle_record_casual import LifeStyleCasual
+from bench.pipeline.generate_task.branches.lifestyle_record_advanced import LifeStyleAdvanced
 from bench.pipeline.generate_task.branches.shopping import ShoppingBranch
 from bench.utils.clients import get_gen_route
 
+# All available branch names (used for --branch filter)
+BRANCH_NAMES = ["shopping", "wearable_data_casual", "wearable_data_advanced", "lifestyle_record_casual", "lifestyle_record_advanced"]
 
-def build_branches():
+
+def build_branches(branch_filter: Optional[str] = None):
     """
-    Assemble all task branches to run for a given model.
-    Extend this list as more branches are added.
+    Assemble task branches to run for a given model.
+    If branch_filter is "all" or None, return all branches.
+    Otherwise return only the branch matching branch_filter.
     """
     client_obj, model = get_gen_route()
-    return [
+    all_branches = [
+        WearableDataCasual(client=client_obj, model=model),
+        WearableDataAdvanced(client=client_obj, model=model),
+        LifeStyleCasual(client=client_obj, model=model),
+        LifeStyleAdvanced(client=client_obj, model=model),
         ShoppingBranch(client=client_obj, model=model),
     ]
+    if branch_filter is None or branch_filter == "all":
+        return all_branches
+    filtered = [b for b in all_branches if b.branch_name == branch_filter]
+    if not filtered:
+        raise ValueError(
+            f"Unknown branch '{branch_filter}'. Available: {BRANCH_NAMES}"
+        )
+    return filtered
 
 
 def resolve_output_path(profile_id: Optional[str], output_dir: Optional[str | Path]) -> Path:
@@ -59,6 +75,7 @@ def generate_tasks(
     snapshot_dir: str,
     output_path: Optional[str | Path] = None,
     runs_per_branch: Union[int, Dict[str, int]] = 5,
+    branch: Optional[str] = None,
 ):
     """
     Build store, run branches, and save tasks.
@@ -75,7 +92,7 @@ def generate_tasks(
         profile_id=profile_id,
     )
 
-    branches = build_branches()
+    branches = build_branches(branch_filter=branch or "all")
     resolved_output = resolve_output_path(profile_id, output_path)
 
     orchestrator = TaskOrchestrator(
@@ -154,6 +171,12 @@ def parse_args():
         default="/home/chy/state_aware_bench/bench/snapshots/debug_snapshot",
         help="Where to save store snapshots.",
     )
+    parser.add_argument(
+        "--branch",
+        default="all",
+        choices=["all"] + BRANCH_NAMES,
+        help="Which branch to generate tasks for. Use 'all' for all branches.",
+    )
     return parser.parse_args()
 
 
@@ -183,5 +206,6 @@ if __name__ == "__main__":
             snapshot_dir=args.snapshot_dir,
             output_path=args.output_dir,
             runs_per_branch=args.runs_per_branch,
+            branch=args.branch,
         )
 

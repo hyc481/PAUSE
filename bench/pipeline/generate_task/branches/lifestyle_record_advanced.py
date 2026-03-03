@@ -20,16 +20,17 @@ from pathlib import Path
 import json
 
 
-root = Path(__file__).resolve().parents[2]
-tool_schemas_path = root / "tool_schemas" / "platform_tools.json"
+from bench.utils.paths import TOOL_SCHEMAS_DIR
+
+tool_schemas_path = TOOL_SCHEMAS_DIR / "platform_tools.json"
 with open(tool_schemas_path, "r") as f:
     tool_schemas = json.load(f)
 
-tool_schemas_path = root / "tool_schemas" / "source_tools.json"
+tool_schemas_path = TOOL_SCHEMAS_DIR / "source_tools.json"
 with open(tool_schemas_path, "r") as f:
     source_tool_schemas = json.load(f)
 
-tool_schemas_path = root / "tool_schemas" / "med_tools.json"
+tool_schemas_path = TOOL_SCHEMAS_DIR / "med_tools.json"
 with open(tool_schemas_path, "r") as f:
     med_tool_schemas = json.load(f)
 
