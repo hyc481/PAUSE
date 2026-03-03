@@ -1,0 +1,16 @@
+__pycache__/
+trajs/*
+
+.idea/
+data_analysis/
+.idea/
+development_notes/
+.vscode/
+bench/snapshots/
+bench/pipeline/generate_task/outputs
+bench/logs
+bench/annotated_logs
+bench/testrun_logs
+bench/generations
+bench/runs
+bench/bench_tasks
